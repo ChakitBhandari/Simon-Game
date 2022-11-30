@@ -53,6 +53,14 @@ $("body").keydown(function(){
     }
 });
 
+$("body").on("touchstart",function(){
+    if(start == false){
+        $("body").css("background-color","#011F3F");
+        console.log("inside keydown!!");
+        start = true;
+        next_seq_helper();
+    }
+});
 
 $(".btn").click(function(){
     if(start == true){
